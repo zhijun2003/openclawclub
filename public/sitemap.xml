@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Home -->
   <url>
-    <loc>https://qingyun.ai/openclaw/</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qingyun.ai/openclaw/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qingyun.ai/openclaw/en"/>
+    <loc>https://aiclub.echoflow.cn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aiclub.echoflow.cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiclub.echoflow.cn/en"/>
   </url>
   <url>
-    <loc>https://qingyun.ai/openclaw/en</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qingyun.ai/openclaw/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qingyun.ai/openclaw/en"/>
+    <loc>https://aiclub.echoflow.cn/en</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aiclub.echoflow.cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiclub.echoflow.cn/en"/>
   </url>
 
   <!-- Resources -->
   <url>
-    <loc>https://qingyun.ai/openclaw/resources</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qingyun.ai/openclaw/resources"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qingyun.ai/openclaw/en/resources"/>
+    <loc>https://aiclub.echoflow.cn/resources</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aiclub.echoflow.cn/resources"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiclub.echoflow.cn/en/resources"/>
   </url>
   <url>
-    <loc>https://qingyun.ai/openclaw/en/resources</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qingyun.ai/openclaw/resources"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qingyun.ai/openclaw/en/resources"/>
+    <loc>https://aiclub.echoflow.cn/en/resources</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aiclub.echoflow.cn/resources"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiclub.echoflow.cn/en/resources"/>
   </url>
 
   <!-- Days (ZH) -->
-  <url><loc>https://qingyun.ai/openclaw/day/1</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/day/2</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/day/3</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/day/4</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/day/5</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/day/6</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/day/7</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/1</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/2</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/3</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/4</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/5</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/6</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/day/7</loc></url>
 
   <!-- Days (EN) -->
-  <url><loc>https://qingyun.ai/openclaw/en/day/1</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/en/day/2</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/en/day/3</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/en/day/4</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/en/day/5</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/en/day/6</loc></url>
-  <url><loc>https://qingyun.ai/openclaw/en/day/7</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/1</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/2</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/3</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/4</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/5</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/6</loc></url>
+  <url><loc>https://aiclub.echoflow.cn/en/day/7</loc></url>
 </urlset>

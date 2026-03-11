@@ -6,24 +6,24 @@
 
 ## Pages
 
-URL: https://qingyun.ai/openclaw/
-URL: https://qingyun.ai/openclaw/day/1
-URL: https://qingyun.ai/openclaw/day/2
-URL: https://qingyun.ai/openclaw/day/3
-URL: https://qingyun.ai/openclaw/day/4
-URL: https://qingyun.ai/openclaw/day/5
-URL: https://qingyun.ai/openclaw/day/6
-URL: https://qingyun.ai/openclaw/day/7
-URL: https://qingyun.ai/openclaw/resources
-URL: https://qingyun.ai/openclaw/en
-URL: https://qingyun.ai/openclaw/en/resources
-URL: https://qingyun.ai/openclaw/en/day/1
-URL: https://qingyun.ai/openclaw/en/day/2
-URL: https://qingyun.ai/openclaw/en/day/3
-URL: https://qingyun.ai/openclaw/en/day/4
-URL: https://qingyun.ai/openclaw/en/day/5
-URL: https://qingyun.ai/openclaw/en/day/6
-URL: https://qingyun.ai/openclaw/en/day/7
+URL: https://aiclub.echoflow.cn/
+URL: https://aiclub.echoflow.cn/day/1
+URL: https://aiclub.echoflow.cn/day/2
+URL: https://aiclub.echoflow.cn/day/3
+URL: https://aiclub.echoflow.cn/day/4
+URL: https://aiclub.echoflow.cn/day/5
+URL: https://aiclub.echoflow.cn/day/6
+URL: https://aiclub.echoflow.cn/day/7
+URL: https://aiclub.echoflow.cn/resources
+URL: https://aiclub.echoflow.cn/en
+URL: https://aiclub.echoflow.cn/en/resources
+URL: https://aiclub.echoflow.cn/en/day/1
+URL: https://aiclub.echoflow.cn/en/day/2
+URL: https://aiclub.echoflow.cn/en/day/3
+URL: https://aiclub.echoflow.cn/en/day/4
+URL: https://aiclub.echoflow.cn/en/day/5
+URL: https://aiclub.echoflow.cn/en/day/6
+URL: https://aiclub.echoflow.cn/en/day/7
 
 ## FAQ
 

@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import HomePage from '@/components/HomePage';
-
-const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || 'https://qingyun.ai';
-const BASE_PATH = '/openclaw';
+import { SITE_ORIGIN, BASE_PATH } from '@/config/site';
 
 export const metadata: Metadata = {
   title: '清云AI · OpenClaw 专题 - 7天掌握你的AI私人助理',

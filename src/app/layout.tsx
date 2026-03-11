@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
-
-// 生产站点域名：直接写死，不再依赖 NEXT_PUBLIC_SITE_ORIGIN
-const SITE_ORIGIN = 'https://aiclub.echoflow.cn';
-const BASE_PATH = '';
+import { SITE_ORIGIN, BASE_PATH } from '@/config/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${SITE_ORIGIN}${BASE_PATH}`),

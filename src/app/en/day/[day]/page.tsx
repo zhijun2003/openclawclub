@@ -4,9 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import DayContent from '@/components/DayContent';
-
-const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || 'https://qingyun.ai';
-const BASE_PATH = '/openclaw';
+import { SITE_ORIGIN, BASE_PATH } from '@/config/site';
 
 interface Props {
   params: Promise<{ day: string }>;

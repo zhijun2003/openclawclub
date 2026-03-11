@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import ResourcesPage from '@/components/ResourcesPage';
-
-const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || 'https://qingyun.ai';
-const BASE_PATH = '/openclaw';
+import { SITE_ORIGIN, BASE_PATH } from '@/config/site';
 
 export const metadata: Metadata = {
   title: 'Resource Hub',
