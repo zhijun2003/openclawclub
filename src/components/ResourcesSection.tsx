@@ -61,7 +61,8 @@ export default function ResourcesSection({ locale, dict }: ResourcesSectionProps
   const sectionRef = useRef<HTMLElement>(null);
   const featured = getFeaturedResources();
   const isZh = locale === 'zh';
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  // Default locale is zh, so only English needs a path prefix.
+  const prefix = locale === 'en' ? '/en' : '';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -165,10 +166,7 @@ export default function ResourcesSection({ locale, dict }: ResourcesSectionProps
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
           </a>
           <p className="text-gray-500 text-sm mt-3">
-            {isZh ? '持续更新中 · ' : 'Continuously updated · '}
-            <a href="https://github.com/mengjian-github/openclaw101" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-              {isZh ? '欢迎提交 PR 补充资源' : 'PRs welcome'}
-            </a>
+            {isZh ? '持续更新中' : 'Continuously updated'}
           </p>
         </div>
       </div>

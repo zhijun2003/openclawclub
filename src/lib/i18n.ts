@@ -3,8 +3,8 @@ import zh from '@/locales/zh.json';
 
 export type Locale = 'en' | 'zh';
 
-export const locales: Locale[] = ['en', 'zh'];
-export const defaultLocale: Locale = 'en';
+export const locales: Locale[] = ['zh', 'en'];
+export const defaultLocale: Locale = 'zh';
 
 const dictionaries = {
   en,
@@ -20,22 +20,19 @@ export function getDictionary(locale: Locale): Dictionary {
 export function getLocaleFromPath(pathname: string): Locale {
   const segments = pathname.split('/').filter(Boolean);
   const firstSegment = segments[0];
-  if (locales.includes(firstSegment as Locale)) {
-    return firstSegment as Locale;
-  }
+  if (firstSegment === 'en') return 'en';
+  if (firstSegment === 'zh') return 'zh';
   return defaultLocale;
 }
 
 export function getLocalizedPath(path: string, locale: Locale): string {
-  // Remove any existing locale prefix
+  // Remove existing locale prefix so we can re-apply it consistently.
   const cleanPath = path.replace(/^\/(en|zh)/, '') || '/';
-  
-  // Default locale doesn't need prefix
+
   if (locale === defaultLocale) {
     return cleanPath;
   }
-  
-  // Add locale prefix
+
   return `/${locale}${cleanPath === '/' ? '' : cleanPath}`;
 }
 

@@ -13,7 +13,8 @@ export default function Navbar({ locale, dict }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  // Default locale is zh, so only English needs a path prefix.
+  const prefix = locale === 'en' ? '/en' : '';
 
   const links = [
     { label: dict.nav.learn, href: '#what-is' },
@@ -43,7 +44,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a href={prefix || '/'} className="font-bold text-base sm:text-lg whitespace-nowrap" style={{ color: '#fff' }}>
-          🐾 <span className="gradient-text">OpenClaw</span> 101
+          🐾 清云AI · <span className="gradient-text">OpenClaw</span> 专题
         </a>
 
         {/* Desktop links */}

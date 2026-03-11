@@ -2,15 +2,18 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
 
+const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || 'https://qingyun.ai';
+const BASE_PATH = '/openclaw';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://openclaw101.dev'),
+  metadataBase: new URL(`${SITE_ORIGIN}${BASE_PATH}`),
   title: {
-    default: 'OpenClaw 101 - Master Your AI Assistant in 7 Days | Free Tutorial',
-    template: '%s | OpenClaw 101',
+    default: '清云AI · OpenClaw 专题 - 7天掌握你的AI私人助理 | 免费教程',
+    template: '%s | 清云AI · OpenClaw 专题',
   },
-  description: 'Free 7-day tutorial to master OpenClaw (Clawdbot/Moltbot). Learn to build your own AI personal assistant with installation guides, skills, automation, and 70+ curated resources.',
+  description: '免费 7 天教程带你掌握 OpenClaw（Clawdbot/Moltbot）。从安装到技能、自动化与资源库，完整搭建你的 AI 私人助理。',
   keywords: [
-    'OpenClaw', 'OpenClaw tutorial', 'OpenClaw guide', 'OpenClaw 教程',
+    '清云AI', 'OpenClaw', 'OpenClaw 专题', 'OpenClaw 教程',
     'Clawdbot', 'Moltbot', 'AI assistant', 'AI Agent', 'personal AI',
     'Telegram bot', 'self-hosted AI', 'open source AI', 'AI automation',
     'OpenClaw skills', 'OpenClaw installation', 'OpenClaw setup',
@@ -31,60 +34,56 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'OpenClaw 101 - Master Your AI Assistant in 7 Days',
-    description: 'Free 7-day tutorial to build your own AI personal assistant with OpenClaw. 70+ curated resources, skills ecosystem, and step-by-step guides.',
-    url: 'https://openclaw101.dev',
-    siteName: 'OpenClaw 101',
+    title: '清云AI · OpenClaw 专题 - 7天掌握你的AI私人助理',
+    description: '免费 7 天教程：用 OpenClaw 搭建你的 AI 私人助理，包含技能生态与资源库。',
+    url: `${SITE_ORIGIN}${BASE_PATH}`,
+    siteName: '清云AI · OpenClaw 专题',
     images: [
       {
-        url: 'https://openclaw101.dev/og-image.png',
+        url: `${SITE_ORIGIN}${BASE_PATH}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'OpenClaw 101 - AI Assistant Tutorial',
+        alt: '清云AI · OpenClaw 专题 - AI Assistant Tutorial',
       },
     ],
-    locale: 'en_US',
+    locale: 'zh_CN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OpenClaw 101 - Master Your AI Assistant in 7 Days',
-    description: 'Free 7-day tutorial to build your own AI personal assistant with OpenClaw.',
-    images: ['https://openclaw101.dev/og-image.png'],
-  },
-  verification: {
-    google: 'G-86ESEQC7V8',
+    title: '清云AI · OpenClaw 专题 - 7天掌握你的AI私人助理',
+    description: '免费 7 天教程：用 OpenClaw 搭建你的 AI 私人助理。',
+    images: [`${SITE_ORIGIN}${BASE_PATH}/og-image.png`],
   },
   alternates: {
-    canonical: 'https://openclaw101.dev',
+    canonical: `${SITE_ORIGIN}${BASE_PATH}`,
     languages: {
-      'en': 'https://openclaw101.dev',
-      'zh': 'https://openclaw101.dev/zh',
+      en: `${SITE_ORIGIN}${BASE_PATH}/en`,
+      zh: `${SITE_ORIGIN}${BASE_PATH}`,
     },
   },
 };
 
-// Schema.org structured data
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'WebSite',
-      '@id': 'https://openclaw101.dev/#website',
-      url: 'https://openclaw101.dev',
-      name: 'OpenClaw 101',
-      description: 'The definitive guide to mastering OpenClaw AI assistant',
-      inLanguage: ['en', 'zh'],
+      '@id': `${SITE_ORIGIN}${BASE_PATH}/#website`,
+      url: `${SITE_ORIGIN}${BASE_PATH}`,
+      name: '清云AI · OpenClaw 专题',
+      description: 'OpenClaw AI 助理的系统化学习专题',
+      inLanguage: ['zh', 'en'],
     },
     {
       '@type': 'Course',
-      '@id': 'https://openclaw101.dev/#course',
+      '@id': `${SITE_ORIGIN}${BASE_PATH}/#course`,
       name: 'OpenClaw 7-Day Tutorial',
       description: 'Learn to build and customize your own AI personal assistant with OpenClaw in 7 days',
       provider: {
         '@type': 'Organization',
-        name: 'OpenClaw 101',
-        url: 'https://openclaw101.dev',
+        name: '清云AI · OpenClaw 专题',
+        url: `${SITE_ORIGIN}${BASE_PATH}`,
       },
       hasCourseInstance: {
         '@type': 'CourseInstance',
@@ -94,11 +93,11 @@ const jsonLd = {
       numberOfLessons: 7,
       teaches: ['AI Assistant Setup', 'OpenClaw Configuration', 'Skills Development', 'Automation'],
       isAccessibleForFree: true,
-      availableLanguage: ['en', 'zh'],
+      availableLanguage: ['zh', 'en'],
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://openclaw101.dev/#faq',
+      '@id': `${SITE_ORIGIN}${BASE_PATH}/#faq`,
       mainEntity: [
         {
           '@type': 'Question',
@@ -113,7 +112,7 @@ const jsonLd = {
           name: 'Is OpenClaw free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, OpenClaw is fully open-source and free to use. You only pay for the AI model API costs (e.g., Claude ~$3-15/month) and server hosting (~$5-20/month).',
+            text: 'Yes, OpenClaw is fully open-source and free to use. You only pay for the AI model API costs and server hosting.',
           },
         },
         {
@@ -121,7 +120,7 @@ const jsonLd = {
           name: 'How do I install OpenClaw?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You need a Linux server (Ubuntu 22.04+ recommended), Node.js 20+, and an API key for your chosen AI model. Clone the repository, run the setup wizard, configure your Telegram bot token, and start the gateway. The Day 2 tutorial at openclaw101.dev/day/2 covers this step by step.',
+            text: 'You need a Linux server (Ubuntu 22.04+ recommended), Node.js 20+, and an API key for your chosen AI model. Clone the repository, run the setup wizard, configure your Telegram bot token, and start the gateway. The Day 2 tutorial covers this step by step.',
           },
         },
         {
@@ -129,7 +128,7 @@ const jsonLd = {
           name: 'What AI models does OpenClaw support?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'OpenClaw supports Anthropic Claude (recommended), OpenAI GPT-4, Google Gemini, xAI Grok, and any model available through OpenRouter.',
+            text: 'OpenClaw supports Anthropic Claude, OpenAI GPT-4, Google Gemini, xAI Grok, and any model available through OpenRouter.',
           },
         },
         {
@@ -137,32 +136,9 @@ const jsonLd = {
           name: 'What can an OpenClaw assistant do?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'An OpenClaw assistant can manage email, schedule calendar events, browse the web with a real browser, write and execute code, analyze SEO data, create content, monitor websites, automate workflows, and more through its extensible skills system with 5494+ community plugins.',
+            text: 'An OpenClaw assistant can manage email, schedule calendar events, browse the web with a real browser, write and execute code, analyze SEO data, create content, monitor websites, and automate workflows through its skills system.',
           },
         },
-        {
-          '@type': 'Question',
-          name: 'What is the difference between OpenClaw and ChatGPT?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT is a conversational AI in the cloud. OpenClaw is a framework for building your own AI agent on your server, with persistent memory, real tool access (email, browser, code execution), proactive automation (heartbeats, cron jobs), and full customization. ChatGPT is a chat app; OpenClaw is a personal AI employee.',
-          },
-        },
-      ],
-    },
-    {
-      '@type': 'ItemList',
-      '@id': 'https://openclaw101.dev/#tutorial-list',
-      name: 'OpenClaw 7-Day Learning Path',
-      numberOfItems: 7,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Day 1: Meet OpenClaw', url: 'https://openclaw101.dev/day/1' },
-        { '@type': 'ListItem', position: 2, name: 'Day 2: Installation', url: 'https://openclaw101.dev/day/2' },
-        { '@type': 'ListItem', position: 3, name: 'Day 3: Give Your Assistant a Soul', url: 'https://openclaw101.dev/day/3' },
-        { '@type': 'ListItem', position: 4, name: 'Day 4: Connect Your Digital Life', url: 'https://openclaw101.dev/day/4' },
-        { '@type': 'ListItem', position: 5, name: 'Day 5: Skills Ecosystem', url: 'https://openclaw101.dev/day/5' },
-        { '@type': 'ListItem', position: 6, name: 'Day 6: Automation & Heartbeat', url: 'https://openclaw101.dev/day/6' },
-        { '@type': 'ListItem', position: 7, name: 'Day 7: Advanced Techniques', url: 'https://openclaw101.dev/day/7' },
       ],
     },
   ],
@@ -174,51 +150,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Google AdSense */}
-        <meta name="google-adsense-account" content="ca-pub-1081201777589554" />
+    <html lang="zh">
+      <body>
         <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1081201777589554"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
-
-        {/* Schema.org structured data */}
-        <script
+          id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        
-        {/* hreflang tags for i18n */}
-        <link rel="alternate" hrefLang="en" href="https://openclaw101.dev" />
-        <link rel="alternate" hrefLang="zh" href="https://openclaw101.dev/zh" />
-        <link rel="alternate" hrefLang="x-default" href="https://openclaw101.dev" />
-        
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-86ESEQC7V8"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-86ESEQC7V8');`}
-        </Script>
-
-        {/* Privacy-friendly analytics by Plausible */}
-        <Script
-          src="https://plausible.shipsolo.io/js/pa-JFzm3YyWo6Cak1n9mzePz.js"
-          strategy="afterInteractive"
-        />
-        <Script id="plausible" strategy="afterInteractive">
-          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
-plausible.init=plausible.init||function(i){plausible.o=i||{}};
-plausible.init();`}
-        </Script>
-      </head>
-      <body className="font-sans">{children}</body>
+        {children}
+      </body>
     </html>
   );
 }

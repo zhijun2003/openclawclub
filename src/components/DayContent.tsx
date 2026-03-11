@@ -20,11 +20,11 @@ interface DayContentProps {
 
 export default function DayContent({ day, content, frontmatter, prevDay, nextDay, locale }: DayContentProps) {
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
-  
+
   const titles: Record<number, { en: string; zh: string }> = {
     1: { en: 'Getting Started with OpenClaw', zh: '初识 OpenClaw' },
     2: { en: 'Deep Conversations', zh: '深入对话' },
@@ -34,7 +34,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
     6: { en: 'Automation', zh: '自动化' },
     7: { en: 'Advanced Techniques', zh: '高级技巧' },
   };
-  
+
   const t = locale === 'zh' ? {
     day: '第',
     dayUnit: '天',
@@ -52,17 +52,17 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
     readingTime: 'Reading time:',
     minutes: 'min',
   };
-  
+
   // Estimate reading time (Chinese: ~400 chars/min, English: ~200 words/min)
   const charCount = content.length;
   const readingTime = Math.max(1, Math.ceil(charCount / 400));
-  
+
   return (
     <div className={`transition-opacity duration-500 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
       {/* Header */}
       <header className="border-b border-gray-800 bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href={locale === 'zh' ? '/zh' : '/'} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+          <Link href={locale === 'en' ? '/en' : '/'} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
             <span>←</span>
             <span>{t.backToHome}</span>
           </Link>
@@ -71,7 +71,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
           </div>
         </div>
       </header>
-      
+
       {/* Progress bar */}
       <div className="h-1 bg-gray-800">
         <div 
@@ -79,7 +79,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
           style={{ width: `${(day / 7) * 100}%` }}
         />
       </div>
-      
+
       {/* Hero */}
       <div className="bg-gradient-to-b from-gray-800 to-gray-900 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -94,7 +94,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
           </p>
         </div>
       </div>
-      
+
       {/* Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
         <div className="markdown-body">
@@ -115,12 +115,12 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
               h4: ({ children }) => (
                 <h4 className="text-lg font-semibold text-white mt-8 mb-4">{children}</h4>
               ),
-              
+
               // Paragraphs
               p: ({ children }) => (
                 <p className="text-gray-300 leading-relaxed mb-4">{children}</p>
               ),
-              
+
               // Strong & emphasis
               strong: ({ children }) => (
                 <strong className="text-white font-semibold">{children}</strong>
@@ -128,7 +128,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
               em: ({ children }) => (
                 <em className="text-gray-300">{children}</em>
               ),
-              
+
               // Links
               a: ({ href, children }) => (
                 <a 
@@ -140,7 +140,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
                   {children}
                 </a>
               ),
-              
+
               // Lists
               ul: ({ children }) => (
                 <ul className="my-4 ml-6 list-disc text-gray-300 space-y-2">{children}</ul>
@@ -151,7 +151,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
               li: ({ children }) => (
                 <li className="text-gray-300">{children}</li>
               ),
-              
+
               // Code
               code: ({ className, children }) => {
                 const isBlock = className?.includes('language-');
@@ -171,14 +171,14 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
                   {children}
                 </pre>
               ),
-              
+
               // Blockquotes (callouts)
               blockquote: ({ children }) => (
                 <blockquote className="border-l-4 border-blue-500/50 bg-blue-900/20 pl-4 pr-4 py-3 my-4 rounded-r-lg text-gray-300">
                   {children}
                 </blockquote>
               ),
-              
+
               // Tables
               table: ({ children }) => (
                 <div className="overflow-x-auto my-6">
@@ -206,10 +206,10 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
                   {children}
                 </td>
               ),
-              
+
               // Horizontal rule
               hr: () => <hr className="my-8 border-gray-700" />,
-              
+
               // Images
               img: ({ src, alt }) => {
                 // Handle placeholder images from Feishu
@@ -230,14 +230,14 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
           </ReactMarkdown>
         </div>
       </article>
-      
+
       {/* Navigation */}
       <nav className="border-t border-gray-800 py-8">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-3 sm:justify-between">
             {prevDay ? (
               <Link 
-                href={`${locale === 'zh' ? '/zh' : ''}/day/${prevDay}`}
+                href={`${locale === 'en' ? '/en' : ''}/day/${prevDay}`}
                 className="flex items-center justify-center gap-2 px-5 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-sm sm:text-base"
               >
                 <span>←</span>
@@ -246,10 +246,10 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
             ) : (
               <div className="hidden sm:block" />
             )}
-            
+
             {nextDay ? (
               <Link 
-                href={`${locale === 'zh' ? '/zh' : ''}/day/${nextDay}`}
+                href={`${locale === 'en' ? '/en' : ''}/day/${nextDay}`}
                 className="flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors text-sm sm:text-base font-medium"
               >
                 <span className="whitespace-nowrap">{t.next}</span>
@@ -257,7 +257,7 @@ export default function DayContent({ day, content, frontmatter, prevDay, nextDay
               </Link>
             ) : (
               <Link 
-                href={locale === 'zh' ? '/zh' : '/'}
+                href={locale === 'en' ? '/en' : '/'}
                 className="flex items-center justify-center gap-2 px-5 py-3 bg-green-600 hover:bg-green-500 rounded-lg transition-colors text-sm sm:text-base font-medium"
               >
                 <span>🎉 {locale === 'zh' ? '完成！返回首页' : 'Done! Back Home'}</span>

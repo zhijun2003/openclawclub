@@ -17,7 +17,7 @@ export default function LanguageSwitcher({ className = '' }: LanguageSwitcherPro
       {locales.map((locale) => {
         const isActive = locale === currentLocale;
         const href = getLocalizedPath(pathname, locale);
-        
+
         return (
           <Link
             key={locale}

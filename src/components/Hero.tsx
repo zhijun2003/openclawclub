@@ -33,7 +33,7 @@ export default function Hero({ locale, dict }: HeroProps) {
         {/* Main title */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 tracking-tight" style={{ color: '#fff' }}>
           {isZh ? (
-            <>Open<span className="gradient-text">Claw</span> 101</>
+            <>清云AI · <span className="gradient-text">OpenClaw</span> 专题</>
           ) : (
             <>{dict.hero.title} <span className="gradient-text">{dict.hero.titleHighlight}</span></>
           )}
@@ -47,7 +47,7 @@ export default function Hero({ locale, dict }: HeroProps) {
         {/* Secondary tagline */}
         <p className="text-xs sm:text-sm md:text-base mb-6 sm:mb-10 max-w-xl mx-auto px-3" style={{ color: 'rgba(255,255,255,0.5)' }}>
           {isZh 
-            ? 'The open-source guide to building your AI assistant with OpenClaw'
+            ? '清云AI 出品的 OpenClaw 系列专题内容'
             : 'From setup to advanced automation — start your journey here'
           }
         </p>

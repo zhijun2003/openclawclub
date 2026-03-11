@@ -1,34 +1,37 @@
 import type { Metadata } from 'next';
 
+const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || 'https://qingyun.ai';
+const BASE_PATH = '/openclaw';
+
 export const metadata: Metadata = {
-  title: '全网 OpenClaw 资源聚合 — 35+ 篇精选教程 | OpenClaw 101',
+  title: 'OpenClaw Resources — Curated Tutorials | QingyunAI · OpenClaw Topic',
   description:
-    '阿里云、腾讯云、DigitalOcean、B站、Codecademy 等 35+ 篇 OpenClaw 教程资源聚合，涵盖部署、平台接入、技能开发等 8 大分类。',
+    'Curated OpenClaw tutorials and guides from Alibaba Cloud, Tencent Cloud, DigitalOcean, Bilibili, Codecademy and more.',
   alternates: {
-    canonical: 'https://openclaw101.dev/resources',
+    canonical: `${SITE_ORIGIN}${BASE_PATH}/en/resources`,
   },
   openGraph: {
-    title: '全网 OpenClaw 资源聚合 — 35+ 篇精选教程 | OpenClaw 101',
+    title: 'OpenClaw Resources — Curated Tutorials | QingyunAI · OpenClaw Topic',
     description:
-      '阿里云、腾讯云、DigitalOcean、B站、Codecademy 等 35+ 篇 OpenClaw 教程资源聚合，涵盖部署、平台接入、技能开发等 8 大分类。',
+      'Curated OpenClaw tutorials and guides from Alibaba Cloud, Tencent Cloud, DigitalOcean, Bilibili, Codecademy and more.',
     type: 'website',
-    url: 'https://openclaw101.dev/resources',
-    siteName: 'OpenClaw 101',
+    url: `${SITE_ORIGIN}${BASE_PATH}/en/resources`,
+    siteName: 'QingyunAI · OpenClaw Topic',
     images: [
       {
-        url: '/og-image.png',
+        url: `${SITE_ORIGIN}${BASE_PATH}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: '全网 OpenClaw 资源聚合 — 35+ 篇精选教程',
+        alt: 'OpenClaw Resources — Curated Tutorials',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '全网 OpenClaw 资源聚合 — 35+ 篇精选教程 | OpenClaw 101',
+    title: 'OpenClaw Resources — Curated Tutorials | QingyunAI · OpenClaw Topic',
     description:
-      '阿里云、腾讯云、DigitalOcean、B站、Codecademy 等 35+ 篇 OpenClaw 教程资源聚合，涵盖部署、平台接入、技能开发等 8 大分类。',
-    images: ['/og-image.png'],
+      'Curated OpenClaw tutorials and guides from Alibaba Cloud, Tencent Cloud, DigitalOcean, Bilibili, Codecademy and more.',
+    images: [`${SITE_ORIGIN}${BASE_PATH}/og-image.png`],
   },
 };
 

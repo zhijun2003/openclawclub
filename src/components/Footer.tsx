@@ -7,7 +7,8 @@ interface FooterProps {
 
 export default function Footer({ locale, dict }: FooterProps) {
   const isZh = locale === 'zh';
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  // Default locale is zh, so only English needs a path prefix.
+  const prefix = locale === 'en' ? '/en' : '';
 
   return (
     <footer className="hero-glow py-6 sm:py-12">
@@ -73,7 +74,7 @@ export default function Footer({ locale, dict }: FooterProps) {
         <div className="border-t border-white/10 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <div className="text-xs sm:text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Made with 🐈‍⬛ by <a href="https://xiaomo.dev" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.8)' }}>{isZh ? '小墨' : 'Xiaomo'}</a> | OpenClaw 101
+              Made with 🐈‍⬛ by <a href="https://xiaomo.dev" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.8)' }}>{isZh ? '小墨' : 'Xiaomo'}</a> | 清云AI · OpenClaw 专题
             </div>
             <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-[10px] sm:text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
               <a href="https://mengjian.site" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{isZh ? '孟健AI编程出品' : 'By Mengjian'}</a>

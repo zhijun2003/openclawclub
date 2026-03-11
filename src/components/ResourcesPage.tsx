@@ -147,7 +147,7 @@ const sourceDots: Record<string, string> = {
   '腾讯新闻': '#0052d9',
   'Reddit': '#ff4500',
   'Substack': '#ff6719',
-  'OpenClaw 101': '#2563eb',
+  '清云AI · OpenClaw 专题': '#2563eb',
   'Creator Economy': '#7c3aed',
   'NxCode': '#0ea5e9',
   'Scientific American': '#000000',
@@ -285,7 +285,8 @@ export default function ResourcesPage({ locale }: ResourcesPageProps) {
   const [search, setSearch] = useState('');
   const mainRef = useRef<HTMLDivElement>(null);
   const t = texts[locale];
-  const homeUrl = locale === 'zh' ? '/zh' : '/';
+  // Default locale is zh, so only English needs a path prefix.
+  const homeUrl = locale === 'en' ? '/en' : '/';
 
   const searchResults = search
     ? resources.filter((r) => {
@@ -487,7 +488,7 @@ export default function ResourcesPage({ locale }: ResourcesPageProps) {
       {/* ── footer ── */}
       <footer className="hero-glow py-8 mt-4">
         <div className="max-w-5xl mx-auto px-4 text-center text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-          {t.footerMadeBy} <span style={{ color: 'rgba(255,255,255,0.7)' }}>小墨</span> · <a href={homeUrl} className="hover:underline" style={{ color: 'rgba(255,255,255,0.6)' }}>OpenClaw 101</a> · <a href="https://github.com/mengjian-github/openclaw101" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'rgba(255,255,255,0.6)' }}>GitHub</a>
+          {t.footerMadeBy} <span style={{ color: 'rgba(255,255,255,0.7)' }}>小墨</span> · <a href={homeUrl} className="hover:underline" style={{ color: 'rgba(255,255,255,0.6)' }}>清云AI · OpenClaw 专题</a> · <a href="https://github.com/mengjian-github/openclaw101" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: 'rgba(255,255,255,0.6)' }}>GitHub</a>
         </div>
       </footer>
 
