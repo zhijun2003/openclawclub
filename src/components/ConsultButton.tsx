@@ -81,9 +81,9 @@ export default function ConsultButton({ locale }: ConsultButtonProps) {
             {/* QR Code - 清云AI 咨询微信 */}
             <div className="text-center">
               <img
-                src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ5WFpjhn_la7AHZmTDlsf84BpwRCYbQACUiUAAvfBcFTUqknrigmVhjoE.png"
+                src="/wechat_qrcode_zjx.webp"
                 alt={isZh ? '微信二维码' : 'WeChat QR'}
-                className="w-32 h-32 mx-auto rounded-xl border border-gray-200"
+                className="w-32 h-32 mx-auto rounded-xl border border-gray-200 object-contain bg-white"
               />
             </div>
           </div>

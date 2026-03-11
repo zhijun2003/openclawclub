@@ -155,7 +155,7 @@ export default function Community({ locale, dict }: CommunityProps) {
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 order-1 sm:order-2">
                 <div className="text-center">
                   <img
-                    src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ5WFpjhn_la7AHZmTDlsf84BpwRCYbQACUiUAAvfBcFTUqknrigmVhjoE.png"
+                    src="/wechat_qrcode_zjx.webp"
                     alt="微信二维码"
                     className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg border-2 border-white/30 mb-1.5 mx-auto object-cover"
                   />
@@ -190,12 +190,12 @@ export default function Community({ locale, dict }: CommunityProps) {
                 </p>
               </div>
 
-              {/* QR Code */}
+              {/* QR Code - 视频课 */}
               <div className="text-center order-1 sm:order-2 shrink-0">
                 <img
-                  src="/video-course-qr-code.jpg"
+                  src="/wechat_qrcode_zjx.webp"
                   alt="视频课二维码"
-                  className="w-36 sm:w-44 md:w-52 rounded-xl mx-auto bg-white"
+                  className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-xl mx-auto bg-white object-contain"
                 />
                 <p className="text-white/60 text-xs mt-2">扫码查看课程详情</p>
               </div>
