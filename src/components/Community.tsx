@@ -46,9 +46,9 @@ const itemsZh = [
   },
   {
     icon: '⭐',
-    title: '清云AI · OpenClaw 专题源码',
-    desc: '本站源码，欢迎 Star 和 PR',
-    link: 'https://github.com/mengjian-github/openclaw101',
+    title: '清云API',
+    desc: '清云AI 官方 API 服务入口，一站式调用多模型能力',
+    link: 'https://api.echoflow.cn/',
     color: 'hover:border-yellow-300 hover:bg-yellow-50',
   },
 ];
@@ -91,9 +91,9 @@ const itemsEn = [
   },
   {
     icon: '⭐',
-    title: 'QingyunAI · OpenClaw Topic Source',
-    desc: 'This site\'s source code. Star and PRs welcome!',
-    link: 'https://github.com/mengjian-github/openclaw101',
+    title: 'Qingyun API',
+    desc: 'QingyunAI official API gateway for multi-model AI services',
+    link: 'https://api.echoflow.cn/',
     color: 'hover:border-yellow-300 hover:bg-yellow-50',
   },
 ];
@@ -151,20 +151,11 @@ export default function Community({ locale, dict }: CommunityProps) {
                 </div>
               </div>
 
-              {/* QR Codes */}
+              {/* QR Code */}
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 order-1 sm:order-2">
                 <div className="text-center">
                   <img
-                    src="/wechat-qr.jpg"
-                    alt="公众号二维码"
-                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg border-2 border-white/30 mb-1.5 mx-auto object-cover"
-                  />
-                  <p className="text-white text-xs font-medium">公众号</p>
-                  <p className="text-white/60 text-[10px] mt-0.5">回复「OpenClaw」入群</p>
-                </div>
-                <div className="text-center">
-                  <img
-                    src="/wechat-personal-qr.jpg"
+                    src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ5WFpjhn_la7AHZmTDlsf84BpwRCYbQACUiUAAvfBcFTUqknrigmVhjoE.png"
                     alt="微信二维码"
                     className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg border-2 border-white/30 mb-1.5 mx-auto object-cover"
                   />

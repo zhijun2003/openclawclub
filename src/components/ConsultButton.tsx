@@ -51,9 +51,6 @@ export default function ConsultButton({ locale }: ConsultButtonProps) {
               <h3 className="text-xl font-bold text-gray-900">
                 {isZh ? 'OpenClaw 付费咨询' : 'OpenClaw Consultation'}
               </h3>
-              <p className="text-gray-500 text-sm mt-1">
-                {isZh ? '腾讯T11 · 字节3-1 · AI编程专家' : 'Ex-Tencent T11 · Ex-ByteDance · AI Expert'}
-              </p>
             </div>
 
             {/* Pricing */}
@@ -81,22 +78,13 @@ export default function ConsultButton({ locale }: ConsultButtonProps) {
               </div>
             </div>
 
-            {/* QR Code */}
+            {/* QR Code - 清云AI 咨询微信 */}
             <div className="text-center">
               <img
-                src="/wechat-personal-qr.jpg"
+                src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEQ5WFpjhn_la7AHZmTDlsf84BpwRCYbQACUiUAAvfBcFTUqknrigmVhjoE.png"
                 alt={isZh ? '微信二维码' : 'WeChat QR'}
-                className="w-32 h-32 mx-auto rounded-xl border border-gray-200 mb-3"
+                className="w-32 h-32 mx-auto rounded-xl border border-gray-200"
               />
-              <p className="text-sm text-gray-600">
-                {isZh ? '扫码添加微信，备注「OpenClaw咨询」' : 'Scan to add WeChat, note "OpenClaw"'}
-              </p>
-            </div>
-
-            {/* Trust badges */}
-            <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-gray-100">
-              <span className="text-xs text-gray-400">📚 {isZh ? '《DeepSeek》作者' : 'DeepSeek Book Author'}</span>
-              <span className="text-xs text-gray-400">👥 {isZh ? '3万+粉丝' : '30k+ Followers'}</span>
             </div>
           </div>
         </div>

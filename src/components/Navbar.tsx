@@ -71,13 +71,13 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           <LanguageSwitcher />
           
           <a
-            href="https://github.com/mengjian-github/openclaw101"
+            href="https://api.echoflow.cn/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors duration-200"
             style={{ color: '#fff' }}
           >
-            ⭐ GitHub
+            ⭐ {locale === 'zh' ? '清云API' : 'Qingyun API'}
           </a>
         </div>
 
@@ -129,13 +129,13 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           </div>
           
           <a
-            href="https://github.com/mengjian-github/openclaw101"
+            href="https://api.echoflow.cn/"
             target="_blank"
             rel="noopener noreferrer"
             className="block py-3 transition-colors duration-200 hover:text-white"
             style={{ color: 'rgba(255,255,255,0.6)' }}
           >
-            ⭐ GitHub
+            ⭐ {locale === 'zh' ? '清云API' : 'Qingyun API'}
           </a>
         </div>
       )}
